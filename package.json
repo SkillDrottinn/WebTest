@@ -1,0 +1,26 @@
+{
+  "name": "webtest",
+  "version": "1.0.0",
+  "description": "삽질용 임시 레포",
+  "main": "index.html",
+  "scripts": {
+    "prebuild": "rm -rf build && mkdir build",
+    "build": "cp -r ./src/assets ./build/assets && cp ./src/script.js ./build/script.js && cp ./src/index.html ./build/index.html",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SkillDrottinn/WebTest.git"
+  },
+  "keywords": [],
+  "author": "Skill Drottinn",
+  "license": "Deek Dark License - Type C",
+  "bugs": {
+    "url": "https://github.com/SkillDrottinn/WebTest/issues"
+  },
+  "homepage": "https://skilldrottinn.github.io/WebTest",
+  "dependencies": {
+    "gh-pages": "^3.2.0"
+  }
+}
